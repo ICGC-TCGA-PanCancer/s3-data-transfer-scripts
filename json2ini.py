@@ -7,7 +7,7 @@ import os
 import sys
 
 
-# USAGE: json2ini.py [input json file] [output folder]
+# USAGE: json2ini.py [input json file] [template file] [output folder]
 # Creates an ini file in the designated output folder
 
 def main():
