@@ -18,6 +18,13 @@ RUN \
 RUN mkdir /gitroot && \
   cd /gitroot && \
   git clone https://github.com/ICGC-TCGA-PanCancer/s3-data-transfer-scripts.git
+  
+# Install ubuntu user
+RUN useradd ubuntu
+RUN chown -R ubuntu:ubuntu /gitroot 
+
+# Switch to user ubuntu
+USER ubuntu
 
 WORKDIR /gitroot/s3-data-transfer-scripts
 
